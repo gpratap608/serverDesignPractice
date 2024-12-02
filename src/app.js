@@ -17,4 +17,11 @@ app.use(express.urlencoded({
 app.use(express.static("public"))
 app.use(cookieParser())
 
+
+import userRouter from './routes/users.routes.js'
+
+app.use("/api/user",userRouter)
+
+//http://localhost:8080/api/user/register
+
 export default app
